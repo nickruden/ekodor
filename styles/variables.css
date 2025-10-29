@@ -1,0 +1,51 @@
+:root {
+    --color-title: #2D1D05;
+    --color-lightTitle: rgba(45, 29, 5, 0.6);
+    --color-red: #E74F10;
+    --color-black: #000;
+    --color-white: #FFF;
+    --color-text: rgba(6, 6, 6, 0.6);
+
+    --padding: 2rem;
+
+    --header-height: 11.7rem;
+}
+
+@media (max-width: 1199px) {
+    :root {
+        --header-height: 9.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        --header-height: 10rem;
+    }
+}
+
+/* @media (max-width: 769px) {
+    :root {
+        --header-height: 7.8rem;
+    }
+}
+
+@media (max-width: 575px) {
+    :root {
+        --header-height: 6.1rem;
+    }
+} */
+
+.fancybox__container {
+    --fancybox-bg: rgba(0, 0, 0, 0.2);
+}
+
+.is-compact .fancybox__content>.f-button.is-close-btn {
+    --f-button-bg: transparent;
+    --f-button-hover-bg: transparent;
+    --f-button-active-bg: transparent;
+    --f-button-svg-width: 32px;
+    --f-button-svg-height: 32px;
+    --f-button-svg-stroke-width: auto;
+    top: 15px;
+    right: 15px;
+}

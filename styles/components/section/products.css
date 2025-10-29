@@ -1,0 +1,143 @@
+.products {}
+
+.products__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem 2rem;
+}
+
+@media (max-width: 1400px) {
+    .products__items {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .products__items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 2rem;
+    }
+}
+
+@media (max-width: 769px) {
+    .products__items {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 575px) {
+    .products__items {
+        gap: 2.4rem 2rem;
+    }
+}
+
+.products__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+}
+
+@media (max-width: 1199px) {
+    .products__item {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 769px) {
+    .products__item {
+        gap: 1rem;
+    }
+}
+
+.products__item-img-wrap {
+    height: 362px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+@media (max-width: 1400px) {
+    .products__item-img-wrap {
+        height: 350px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .products__item-img-wrap {
+        height: 320px;
+    }
+}
+
+@media (max-width: 575px) {
+    .products__item-img-wrap {
+        height: 260px;
+    }
+}
+
+.products__item-img-wrap img {
+    width: 100%;
+    height: 100%;
+}
+
+.products__item-body {
+    padding-right: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+@media (max-width: 1199px) {
+    .products__item-body {
+        padding-right: 1rem;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 769px) {
+    .products__item-body {
+        font-size: 1.4rem;
+    }
+}
+
+.products__item-body ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.products__item-body ul li {
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.14);
+    position: relative;
+    padding: 0.96rem 1rem 0.96rem 3.5rem;
+}
+
+@media (max-width: 575px) {
+    .products__item-body ul li {
+        padding: 0.36rem 1rem 0.36rem 3rem;
+    }
+}
+
+.products__item-body ul li::before {
+    content: "•";
+    position: absolute;
+    left: 10px;
+    color: var(--color-red);
+    font-size: 1.8rem;
+}
+
+.products__item-body ul>li>a {
+    display: block;
+}
+
+.products .btn {
+    margin-top: 3rem;
+}
+
+@media (max-width: 575px) {
+    .products .btn {
+        margin-top: 2rem;
+    }
+}

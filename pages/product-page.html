@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Экодор</title>
+
+    <link rel="stylesheet" href="../styles/variables.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+
+    <!-- БИБЛИОТЕКИ -->
+    <link rel="stylesheet" href="../assets/libs/swiper/swiper-bundle.min.css" />
+    <link rel="preload" href="../assets/libs/fancybox/fancybox.css" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="../assets/libs/fancybox/fancybox.css" /></noscript>
+
+    <link rel="stylesheet" href="../styles/custom.css" />
+
+    <link rel="stylesheet" href="../styles/UI/button.css" />
+    <link rel="stylesheet" href="../styles/UI/checkbox.css" />
+    <link rel="stylesheet" href="../styles/UI/dropdown.css" />
+    <link rel="stylesheet" href="../styles/UI/inputs.css" />
+
+    <link rel="stylesheet" href="../styles/components/header.css" />
+    <link rel="stylesheet" href="../styles/components/footer.css" />
+    <link rel="stylesheet" href="../styles/components/my-breadcrumbs.css" />
+    <link rel="stylesheet" href="../styles/components/my-form.css" />
+    <link rel="stylesheet" href="../styles/components/my-modal.css" />
+
+    <link rel="stylesheet" href="../styles/components/section/products.css" />
+    <link rel="preload" href="../styles/components/section/feedback-block.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="preload" href="../styles/components/section/why-choos-us.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="preload" href="../styles/components/section/end-shipments.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="preload" href="../styles/components/section/reviews.css" as="style" onload="this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="../styles/components/section/feedback-block.css" />
+      <link rel="stylesheet" href="../styles/components/section/why-choos-us.css" />
+      <link rel="stylesheet" href="../styles/components/section/end-shipments.css" />
+      <link rel="stylesheet" href="../styles/components/section/reviews.css" />
+    </noscript>
+
+    <!-- СТИЛИ СТРАНИЦЫ -->
+    <link rel="stylesheet" href="../styles/pages/product-page.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="flex flex-column header__desctop-menu">
+        <div class="flex header__top">
+          <div class="flex justify-between items-center my-container">
+            <div class="flex header__top-left">
+              <div class="flex items-center col-auto header__logo-wrap">
+                <a href="../index.html" class="header__logo-link">
+                  <img loading="lazy" src="../assets/images/logo.svg" alt="логотип" />
+                </a>
+                <div class="header__logo-text">
+                  Производство оборудования
+                  <br />
+                  строительной и дорожной
+                  <br />
+                  отрасли с 2001 г.
+                </div>
+              </div>
+              <div class="search-input header__search-input d-none d-md-flex">
+                <input type="text" name="headerSearchInput" id="searchInput" placeholder="Поиск по сайту" />
+              </div>
+            </div>
+            <div class="flex items-center header__top-btns">
+              <button class="btn btn_noColor d-none d-xl-flex" data-modal-open="give-feedback">
+                Получить консультацию
+              </button>
+              <button class="btn d-none d-lg-flex" data-modal-open="write-application">НАПИСАТЬ ЗАЯВКУ</button>
+            </div>
+            <div class="flex header__mobile-btns d-lg-none">
+              <a href="tel:+73512207086" class="header__mobile-contact-btn" aria-label="телефон">
+                <svg viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="23.5" cy="23.5" r="23.5" fill="white" />
+                  <path
+                    d="M18.62 22.79C20.06 25.62 22.38 27.93 25.21 29.38L27.41 27.18C27.68 26.91 28.08 26.82 28.43 26.94C29.55 27.31 30.76 27.51 32 27.51C32.55 27.51 33 27.96 33 28.51V32C33 32.55 32.55 33 32 33C22.61 33 15 25.39 15 16C15 15.45 15.45 15 16 15H19.5C20.05 15 20.5 15.45 20.5 16C20.5 17.25 20.7 18.45 21.07 19.57C21.18 19.92 21.1 20.31 20.82 20.59L18.62 22.79Z"
+                    fill="#E74F10"
+                  />
+                </svg>
+              </a>
+              <a href="mailto:ekodor74@mail.ru" class="header__mobile-contact-btn" aria-label="email">
+                <svg viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="23.5" cy="23.5" r="23.5" fill="white" />
+                  <path
+                    d="M30.667 20.6668L24.0003 24.8335L17.3337 20.6668V19.0002L24.0003 23.1668L30.667 19.0002M30.667 17.3335H17.3337C16.4087 17.3335 15.667 18.0752 15.667 19.0002V29.0002C15.667 29.4422 15.8426 29.8661 16.1551 30.1787C16.4677 30.4912 16.8916 30.6668 17.3337 30.6668H30.667C31.109 30.6668 31.5329 30.4912 31.8455 30.1787C32.1581 29.8661 32.3337 29.4422 32.3337 29.0002V19.0002C32.3337 18.5581 32.1581 18.1342 31.8455 17.8217C31.5329 17.5091 31.109 17.3335 30.667 17.3335Z"
+                    fill="#E74F10"
+                  />
+                </svg>
+              </a>
+              <button class="burger-button">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="header__main-menu d-none d-lg-flex">
+          <div class="flex items-center justify-between my-container">
+            <nav class="flex header__nav">
+              <div class="my-dropdown white-arrow no-active header__catalog">
+                <span>Каталог</span>
+                <div class="submenu">
+                  <div class="submenu__inner">
+                    <div class="submenu__item header__catalog-category">
+                      <div class="header__catalog-category-title">Асфальтобетонный завод АСФА</div>
+                      <ul class="submenu__list header__catalog-category-items">
+                        <li><a href="./product-page.html">АСФА периодического способа действия</a></li>
+                        <li><a href="./product-page.html">АСФА непрерывного способа действия</a></li>
+                        <li><a href="./product-page.html">Мини АБЗ</a></li>
+                        <li><a href="./product-page.html">Грунтосмеситель</a></li>
+                        <li><a href="./product-page.html">Оборудование по производству черного щебня</a></li>
+                      </ul>
+                    </div>
+                    <div class="submenu__item header__catalog-category">
+                      <div class="header__catalog-category-title">Станция нагрева теплоносителя СНТ</div>
+                      <ul class="submenu__list header__catalog-category-items">
+                        <li><a href="./product-page.html">СНТ 45,90</a></li>
+                        <li><a href="./product-page.html">СНТ-О – 170, 300</a></li>
+                      </ul>
+                    </div>
+                    <div class="submenu__item header__catalog-category">
+                      <div class="header__catalog-category-title">Емкость битумная БХ Плавитель твердого битума</div>
+                      <ul class="submenu__list header__catalog-category-items">
+                        <li><a href="./product-page.html">БХ горизонтальные</a></li>
+                        <li><a href="./product-page.html">БХ вертикальные</a></li>
+                        <li><a href="./product-page.html">Плавитель</a></li>
+                      </ul>
+                    </div>
+                    <div class="submenu__item header__catalog-category">
+                      <div class="header__catalog-category-title">Агрегат Сушильного барабана АСБ</div>
+                      <ul class="submenu__list header__catalog-category-items">
+                        <li><a href="./product-page.html">Поток</a></li>
+                        <li><a href="./product-page.html">Противоток</a></li>
+                        <li><a href="./product-page.html">Реверсивный</a></li>
+                      </ul>
+                    </div>
+                    <div class="submenu__item header__catalog-category">
+                      <div class="header__catalog-category-title">Силос  5-100м3</div>
+                      <ul class="submenu__list header__catalog-category-items">
+                        <li><a href="./product-page.html">Агрегат минерального порошка АБЗ</a></li>
+                        <li><a href="./product-page.html">Шлюзовой затвор</a></li>
+                        <li><a href="./product-page.html">Пневмотранспорт</a></li>
+                        <li><a href="./product-page.html">Шнек</a></li>
+                        <li><a href="./product-page.html">Растариватель биг-бегов</a></li>
+                      </ul>
+                    </div>
+                    <div class="submenu__item header__catalog-category">
+                      <div class="header__catalog-category-title">Оборудование сортировки инертных материалов</div>
+                      <ul class="submenu__list header__catalog-category-items">
+                        <li><a href="./product-page.html">Грохот барабанного типа</a></li>
+                        <li><a href="./product-page.html">Грохот инерционный</a></li>
+                        <li><a href="./product-page.html">Грохот вибрационный</a></li>
+                      </ul>
+                    </div>
+                    <div class="submenu__item header__catalog-category">
+                      <div class="header__catalog-category-title">АГРЕГАТЫ АБЗ</div>
+                      <ul class="submenu__list header__catalog-category-items">
+                        <li><a href="./product-page.html">Агрегат питания</a></li>
+                        <li><a href="./product-page.html">Агрегат Сушильного барабана</a></li>
+                        <li><a href="./product-page.html">Башня смесительная</a></li>
+                        <li><a href="./product-page.html">Агрегат минерального порошка АБЗ</a></li>
+                        <li><a href="./product-page.html">Агрегат готовой смеси</a></li>
+                        <li><a href="./product-page.html">Агрегат целлюлозной добавки</a></li>
+                      </ul>
+                    </div>
+                    <div class="submenu__item header__catalog-category">
+                      <div class="header__catalog-category-title">Транспортирующее / Нестан-дартное оборудование</div>
+                      <ul class="submenu__list header__catalog-category-items">
+                        <li><a href="./product-page.html">Конвейер ленточный питатель</a></li>
+                        <li><a href="./product-page.html">Шнек</a></li>
+                        <li><a href="./product-page.html">Шлюзовой затвор </a></li>
+                        <li><a href="./product-page.html">Элеватор</a></li>
+                        <li><a href="./product-page.html">Пневмотранспортное оборудование</a></li>
+                        <li><a href="./product-page.html">Вибропитатель</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="flex header__menu">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="">О компании</a></li>
+                <li><a href="./products.html">Услуги</a></li>
+                <li><a href="">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="flex items-center header__contacts">
+              <a href="tel:+7351220-70-86">
+                <span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.2652 15.5 20.5196 15.6054 20.7071 15.7929C20.8946 15.9804 21 16.2348 21 16.5V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21C15.4913 21 11.1673 19.2089 7.97918 16.0208C4.79107 12.8327 3 8.50868 3 4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H7.5C7.76522 3 8.01957 3.10536 8.20711 3.29289C8.39464 3.48043 8.5 3.73478 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"
+                      fill="#E74F10"
+                    />
+                  </svg>
+                </span>
+                8 (351) 220-70-86
+              </a>
+              <a href="mailto:ekodor74@mail.ru">
+                <span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.2726 5H3.72718C3.55841 5 3.39655 5.06705 3.27721 5.18639C3.15787 5.30573 3.09082 5.46759 3.09082 5.63636V18.3636C3.09082 18.5324 3.15787 18.6943 3.27721 18.8136C3.39655 18.933 3.55841 19 3.72718 19H20.2726C20.4414 19 20.6033 18.933 20.7226 18.8136C20.842 18.6943 20.909 18.5324 20.909 18.3636V5.63636C20.909 5.46759 20.842 5.30573 20.7226 5.18639C20.6033 5.06705 20.4414 5 20.2726 5ZM12.3905 13.1387C12.2788 13.2255 12.1414 13.2726 11.9999 13.2726C11.8585 13.2726 11.721 13.2255 11.6093 13.1387L5.37974 8.29358L6.16088 7.28892L11.9999 11.8302L17.8389 7.28892L18.6201 8.29358L12.3905 13.1387Z"
+                      fill="#E74F10"
+                    />
+                  </svg>
+                </span>
+                ekodor74@mail.ru
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-menu">
+        <nav class="mobile-menu__nav">
+          <button class="mobile-menu__back">Назад</button>
+          <ul class="mobile-menu__list" data-level-menu="1">
+            <li class="mobile-menu__catalog header__catalog">
+              <a href="#">Каталог</a>
+              <ul class="mobile-menu__catalog-list">
+                <li class="header__catalog-category">
+                  <a href="#" class="header__catalog-category-title">Асфальтобетонный завод АСФА</a>
+                  <ul class="mobile-menu__catalog-list header__catalog-category-items">
+                    <li><a href="./product-page.html">АСФА периодического способа действия</a></li>
+                    <li><a href="./product-page.html">АСФА периодического способа действия</a></li>
+                    <li><a href="./product-page.html">Мини АБЗ</a></li>
+                    <li><a href="./product-page.html">Грунтосмеситель</a></li>
+                    <li><a href="./product-page.html">Оборудование по производству черного щебня </a></li>
+                  </ul>
+                </li>
+                <li class="header__catalog-category">
+                  <a href="./product-page.html" class="header__catalog-category-title">
+                    Станция нагрева теплоносителя СНТ
+                  </a>
+                  <ul class="mobile-menu__catalog-list header__catalog-category-items">
+                    <li><a href="./product-page.html">АСФА периодического способа действия</a></li>
+                    <li><a href="./product-page.html">АСФА периодического способа действия</a></li>
+                    <li><a href="./product-page.html">Мини АБЗ</a></li>
+                    <li><a href="./product-page.html">Грунтосмеситель</a></li>
+                    <li><a href="./product-page.html">Оборудование по производству черного щебня </a></li>
+                  </ul>
+                </li>
+                <li class="header__catalog-category">
+                  <a href="./product-page.html" class="header__catalog-category-title">
+                    Емкость битумная БХ Плавитель твердого битума
+                  </a>
+                </li>
+                <li class="header__catalog-category">
+                  <a href="./product-page.html" class="header__catalog-category-title">
+                    Агрегат Сушильного барабана АСБ
+                  </a>
+                </li>
+                <li class="header__catalog-category">
+                  <a href="./product-page.html" class="header__catalog-category-title">Силос 5-100м3</a>
+                </li>
+                <li class="header__catalog-category">
+                  <a href="./product-page.html" class="header__catalog-category-title">
+                    Оборудование сортировки инертных материалов
+                  </a>
+                </li>
+                <li class="header__catalog-category">
+                  <a href="./product-page.html" class="header__catalog-category-title">АГРЕГАТЫ АБЗ</a>
+                </li>
+                <li class="header__catalog-category">
+                  <a href="./product-page.html" class="header__catalog-category-title">
+                    Транспортирующее / Нестандартное оборудование
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="./products.html">Услуги</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__btns">
+          <button class="btn btn_white" data-modal-open="give-feedback">Получить консультацию</button>
+          <button class="btn" data-modal-open="write-application">НАПИСАТЬ ЗАЯВКУ</button>
+        </div>
+        <div class="mobile-menu__contacts">
+          <a href="tel:+7351220-70-86">
+            <span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.2652 15.5 20.5196 15.6054 20.7071 15.7929C20.8946 15.9804 21 16.2348 21 16.5V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21C15.4913 21 11.1673 19.2089 7.97918 16.0208C4.79107 12.8327 3 8.50868 3 4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H7.5C7.76522 3 8.01957 3.10536 8.20711 3.29289C8.39464 3.48043 8.5 3.73478 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"
+                  fill="#E74F10"
+                />
+              </svg>
+            </span>
+            8 (351) 220-70-86
+          </a>
+          <a href="mailto:ekodor74@mail.ru">
+            <span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.2726 5H3.72718C3.55841 5 3.39655 5.06705 3.27721 5.18639C3.15787 5.30573 3.09082 5.46759 3.09082 5.63636V18.3636C3.09082 18.5324 3.15787 18.6943 3.27721 18.8136C3.39655 18.933 3.55841 19 3.72718 19H20.2726C20.4414 19 20.6033 18.933 20.7226 18.8136C20.842 18.6943 20.909 18.5324 20.909 18.3636V5.63636C20.909 5.46759 20.842 5.30573 20.7226 5.18639C20.6033 5.06705 20.4414 5 20.2726 5ZM12.3905 13.1387C12.2788 13.2255 12.1414 13.2726 11.9999 13.2726C11.8585 13.2726 11.721 13.2255 11.6093 13.1387L5.37974 8.29358L6.16088 7.28892L11.9999 11.8302L17.8389 7.28892L18.6201 8.29358L12.3905 13.1387Z"
+                  fill="#E74F10"
+                />
+              </svg>
+            </span>
+            ekodor74@mail.ru
+          </a>
+        </div>
+        <div class="search-input mobile-menu__search-input">
+          <input type="text" name="headerSearchInput" id="searchInputMobile" placeholder="Поиск по сайту" />
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="my-breadcrumbs" aria-label="Breadcrumb">
+        <div class="my-container">
+          <ul itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a href="../index.html" itemprop="item">
+                <span itemprop="name">Главная</span>
+              </a>
+              <meta itemprop="position" content="1" />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a href="./products.html" itemprop="item">
+                <span itemprop="name">Асфальтобетонный завод</span>
+              </a>
+              <meta itemprop="position" content="2" />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a href="./products.html" itemprop="item">
+                <span itemprop="name">Мини АБЗ</span>
+              </a>
+              <meta itemprop="position" content="3" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <section class="pb-large product-info hidden">
+        <div class="my-container">
+          <h2 class="product-info__name">Мини асфальтобетонный завод АБЗ-1000</h2>
+          <div class="product-info__main">
+            <div class="product-info__description">
+              <div class="product-info__gallery product-gallery">
+                <div class="product-gallery__switch-buttons">
+                  <button class="product-gallery__switch-btn active" data-active-type="image">Фото</button>
+                  <button class="product-gallery__switch-btn" data-active-type="video">Видео</button>
+                </div>
+                <div class="product-gallery__main-slider">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide" data-type="image">
+                        <a data-fancybox="gallery" href="../assets/images/catalog/item-1.webp">
+                          <img src="../assets/images/catalog/item-1.webp" alt="Фото 1">
+                        </a>
+                      </div>
+                      <div class="swiper-slide" data-type="image">
+                        <a data-fancybox="gallery" href="../assets/images/catalog/item-2.webp">
+                          <img src="../assets/images/catalog/item-2.webp" alt="Фото 2">
+                        </a>
+                      </div>
+                      <div class="swiper-slide" data-type="image">
+                        <a data-fancybox="gallery" href="../assets/images/catalog/item-3.webp">
+                          <img src="../assets/images/catalog/item-3.webp" alt="Фото 3">
+                        </a>
+                      </div>
+                      <div class="swiper-slide video-poster" data-type="video">
+                        <a data-fancybox="videos" href="../assets/images/my-video.mp4">
+                          <img src="../assets/images/catalog/item-4.webp" alt="Видео превью 1">
+                        </a>
+                      </div>
+                      <div class="swiper-slide video-poster" data-type="video">
+                        <a data-fancybox="videos" href="../assets/images/my-video.mp4">
+                          <img src="../assets/images/catalog/item-5.webp" alt="Видео превью 2">
+                        </a>
+                      </div>
+                      </div>
+                    <div class="swiper-nav-btns">
+                      <div class="swiper-btn-prev"></div>
+                      <div class="swiper-btn-next"></div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination d-lg-none"></div>
+                </div>
+                <div class="product-gallery__thumb-slider d-none d-lg-block">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide" data-type="image">
+                        <img src="../assets/images/catalog/item-1.webp" alt="#">
+                      </div>
+                      <div class="swiper-slide" data-type="image">
+                        <img src="../assets/images/catalog/item-2.webp" alt="#">
+                      </div>
+                      <div class="swiper-slide" data-type="image">
+                        <img src="../assets/images/catalog/item-3.webp" alt="#">
+                      </div>
+                      <div class="swiper-slide" data-type="video">
+                        <img src="../assets/images/catalog/item-4.webp" alt="#">
+                      </div>
+                      <div class="swiper-slide" data-type="video">
+                        <img src="../assets/images/catalog/item-5.webp" alt="#">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info__features">
+                <div class="product-info__price">
+                  <div class="price-value">1 560 000 ₽</div>
+                  <div class="price-sub">в том числе НДС 20%</div>
+                </div>
+                <div class="product-info__specs">
+                  <ul class="product-info__spec-list">
+                    <li>
+                      <span>Производительность</span>
+                      <div class="dots"></div>
+                      <span>50 т/ч</span></li>
+                    <li>
+                      <span>Габариты</span>
+                      <div class="dots"></div>
+                      <span>25×25×12 м</span>
+                    </li>
+                    <li>
+                      <span>Установленная мощность</span>
+                      <div class="dots"></div>
+                      <span>130 кВт</span></li>
+                    <li>
+                      <span>Вес</span>
+                      <div class="dots"></div>
+                      <span>90 тонн</span></li>
+                    <li>
+                      <span>Срок окупаемости</span>
+                      <div class="dots"></div>
+                      <span>3 года</span></li>
+                    <li>
+                      <span>Тип топлива</span>
+                      <div class="dots"></div>
+                      <span>газообразное</span></li>
+                    <li>
+                      <span>Система управления</span>
+                      <div class="dots"></div>
+                      <span>микропроцессорная</span></li>
+                    <li>
+                      <span>Система пылеочистки</span>
+                      <div class="dots"></div>
+                      <span>рукавный фильтр</span></li>
+                  </ul>
+                </div>
+                <div class="product-info__benefits">
+                  <div class="product-info__benefit">
+                    <svg width="44" height="44">
+                      <use xlink:href="../assets/images/icons/sprite.svg#icon-man-option"></use>
+                    </svg> Простота эксплуатации
+                  </div>
+                  <div class="product-info__benefit">
+                    <svg width="44" height="44">
+                      <use xlink:href="../assets/images/icons/sprite.svg#icon-license"></use>
+                    </svg> Гарантия 5 лет
+                  </div>
+                  <div class="product-info__benefit">
+                    <svg width="44" height="44">
+                      <use xlink:href="../assets/images/icons/sprite.svg#icon-energy"></use>
+                    </svg> Экономия энергии
+                  </div>
+                  <div class="product-info__benefit">
+                    <svg width="44" height="44">
+                      <use xlink:href="../assets/images/icons/sprite.svg#icon-garage"></use>
+                    </svg> Собственное производство
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-info__form-wrap my-form__wrap bg-mono-gray">
+              <form action="" class="flex flex-column my-form product-info__form">
+                <div class="my-form__title">Отправьте заявку и мы в&nbsp;ближайшее время с&nbsp;вами свяжемся!</div>
+                <div class="my-form__body">
+                  <div class="flex flex-column my-form__inputs">
+                    <input type="text" name="name" id="feedbackName" class="my-input" placeholder="Ваше имя" required>
+                    <input type="tel" name="" id="" class="my-input" placeholder="Телефон" required>
+                    <input type="email" name="" id="" class="my-input" placeholder="E-mail" required>
+                  </div>
+                  <div class="flex flex-column my-form__bottom">
+                    <button class="btn" type="submit">получить кп</button>
+                    <div class="agreement-text">Нажимая на кнопку “Отправить заявку”, я даю согласие <a href="http://" target="_blank" rel="noopener noreferrer">на обработку персональных данных</a></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="product-info__contains product-contains">
+            <h3 class="h2 d-lg-none">Комплектация</h3>
+            <div class="my-tabs">
+              <div class="my-tabs__nav">
+                <button class="my-tabs__tab-btn active" data-tab="basic">Базовая <span class="d-none d-lg-inline">комплектация</span></button>
+                <button class="my-tabs__tab-btn" data-tab="additional">Дополнительная <span class="d-none d-lg-inline">комплектация</span></button>
+              </div>
+              <div class="my-tabs__content">
+                <div class="my-tabs__tab-panel active" data-tab-id="basic">
+                  <div class="product-contains__cards">
+                    <a href="./product-page.html" class="product-contains__card">
+                      <div class="product-contains__card-body">
+                        <img src="../assets/images/catalog/item-5.webp" alt="#">
+                        <h4 class="product-contains__card-title">Агрегат питания</h4>
+                      </div>
+                      <div class="product-contains__card-price">800 000 ₽</div>
+                    </a>
+                    <a href="./product-page.html" class="product-contains__card">
+                      <div class="product-contains__card-body">
+                        <img src="../assets/images/catalog/item-6.webp" alt="#">
+                        <h4 class="product-contains__card-title">Смесительная установка</h4>
+                      </div>
+                      <div class="product-contains__card-price">380 000 ₽</div>
+                    </a>
+                    <a href="./product-page.html" class="product-contains__card">
+                      <div class="product-contains__card-body">
+                        <img src="../assets/images/catalog/item-7.webp" alt="#">
+                        <h4 class="product-contains__card-title">Сушильный барабан</h4>
+                      </div>
+                      <div class="product-contains__card-price">640 000 ₽</div>
+                    </a>
+                    <a href="./product-page.html" class="product-contains__card">
+                      <div class="product-contains__card-body">
+                        <img src="../assets/images/catalog/item-8.webp" alt="#">
+                        <h4 class="product-contains__card-title">Битумное хозяйство</h4>
+                      </div>
+                      <div class="product-contains__card-price">224 000 ₽</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="my-tabs__tab-panel" data-tab-id="additional">
+                  <div class="product-contains__cards">
+                    <a href="./product-page.html" class="product-contains__card">
+                      <div class="product-contains__card-body">
+                        <img src="../assets/images/catalog/item-3.webp" alt="#">
+                        <h4 class="product-contains__card-title">Смесительная установка</h4>
+                      </div>
+                      <div class="product-contains__card-price">380 000 ₽</div>
+                    </a>
+                    <a href="./product-page.html" class="product-contains__card">
+                      <div class="product-contains__card-body">
+                        <img src="../assets/images/catalog/item-4.webp" alt="#">
+                        <h4 class="product-contains__card-title">Битумное хозяйство</h4>
+                      </div>
+                      <div class="product-contains__card-price">224 000 ₽</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-contains__text">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="30" r="30" fill="#E74F10" fill-opacity="0.04"/>
+                <path d="M30 41.25C36.2132 41.25 41.25 36.2132 41.25 30C41.25 23.7868 36.2132 18.75 30 18.75C23.7868 18.75 18.75 23.7868 18.75 30C18.75 36.2132 23.7868 41.25 30 41.25Z" stroke="#E74F10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M28.75 25V31.25H35" stroke="#E74F10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <span class="color-red">минимальное</span> время монтажа и&nbsp;готовность к&nbsp;сборке!
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-large bg-gray quiz">
+        <div class="quiz__wrap">
+          <div class="my-container">
+            <h2>
+              <span class="quiz__title">Ответьте на <span class="color-red">5 вопросов</span> <br /> и получите предложение по вашему <span class="product-name">АБЗ-1000</span></span>
+              <span class="quiz__final-title">укажите ваши контакты и мы отправим вам <br> коммерческое предложение</span>
+            </h2>
+            <div class="quiz__slider">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="quiz__slide productivity">
+                      <h3>1. Какая производительность завода Вас интересует?</h3>
+                      <div class="flex quiz__inputs">
+                        <input type="text" class="my-input" name="productivity" id="quizProductivity" />
+                        т/ч
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="quiz__slide fuelType">
+                      <h3>2. Вид топлива</h3>
+                      <div class="flex wrap quiz__inputs checkboxes">
+                        <label class="my-checkbox">
+                          <input class="my-checkbox__old" type="checkbox" name="fuelType" id="" value="gaz" />
+                          <div class="my-checkbox__new"></div>
+                          <span class="my-checkbox__text">Газ</span>
+                        </label>
+                        <label class="my-checkbox">
+                          <input class="my-checkbox__old" type="checkbox" name="fuelType" id="" value="dizel" />
+                          <div class="my-checkbox__new"></div>
+                          <span class="my-checkbox__text">Дизельное топливо</span>
+                        </label>
+                        <label class="my-checkbox">
+                          <input class="my-checkbox__old" type="checkbox" name="fuelType" id="" value="mazyt" />
+                          <div class="my-checkbox__new"></div>
+                          <span class="my-checkbox__text">Мазут</span>
+                        </label>
+                        <label class="my-checkbox">
+                          <input class="my-checkbox__old" type="checkbox" name="fuelType" id="" value="combined" />
+                          <div class="my-checkbox__new"></div>
+                          <span class="my-checkbox__text">Комбинированное</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="quiz__slide impactType">
+                      <h3>3. Каково действия нужен завод</h3>
+                      <div class="quiz__inputs checkboxes">
+                        <label class="my-checkbox">
+                          <input class="my-checkbox__old" type="checkbox" name="impactType" id="" value="period" />
+                          <div class="my-checkbox__new"></div>
+                          <span class="my-checkbox__text">Периодического</span>
+                        </label>
+                        <label class="my-checkbox">
+                          <input class="my-checkbox__old" type="checkbox" name="impactType" id="" value="nepreriv" />
+                          <div class="my-checkbox__new"></div>
+                          <span class="my-checkbox__text">Непрерывного</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="quiz__slide">
+                      <h3>4. Какая необходима система пылеочистки</h3>
+                      <div class="flex-column quiz__inputs checkboxes">
+                        <label class="my-checkbox">
+                          <input class="my-checkbox__old" type="checkbox" name="cleaningSystem" id="" value="mokraya" />
+                          <div class="my-checkbox__new"></div>
+                          <span class="my-checkbox__text">“Мокрая” система пылеочистки со скруббером “Вентури” (степень очистки на
+                            выходе - 100 мг/м3)</span>
+                        </label>
+                        <label class="my-checkbox">
+                          <input class="my-checkbox__old" type="checkbox" name="cleaningSystem" id="" value="rykavnoy" />
+                          <div class="my-checkbox__new"></div>
+                          <span class="my-checkbox__text">Установка рукавного фильтра (степень очистки на выходе - 20 мг/м3)</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="quiz__slide">
+                      <h3>5. Комплектация АБЗ должна включать в себя дополнительное оборудование?</h3>
+                      <div class="flex-column quiz__inputs checkboxes">
+                        <label class="my-checkbox">
+                          <input class="my-checkbox__old" type="checkbox" name="additionalEquip" id="" value="agr-got-smesi" />
+                          <div class="my-checkbox__new"></div>
+                          <span class="my-checkbox__text">Агрегат готовой смеси</span>
+                        </label>
+                        <label class="my-checkbox">
+                          <input class="my-checkbox__old" type="checkbox" name="additionalEquip" id="" value="dop-save-bitym" />
+                          <div class="my-checkbox__new"></div>
+                          <span class="my-checkbox__text">Дополнительное хранилище битума</span>
+                        </label>
+                        <label class="my-checkbox">
+                          <input class="my-checkbox__old" type="checkbox" name="additionalEquip" id="" value="agr-mineral-poroshka" />
+                          <div class="my-checkbox__new"></div>
+                          <span class="my-checkbox__text">Агрегат минерального порошка</span>
+                        </label>
+                        <label class="my-checkbox">
+                          <input class="my-checkbox__old" type="checkbox" name="cleaningSystem" id="" value="agr-cel-dobavki" />
+                          <div class="my-checkbox__new"></div>
+                          <span class="my-checkbox__text">Агрегат целлюлозной добавки</span>
+                        </label>
+                        <label class="my-checkbox">
+                          <input class="my-checkbox__old" type="checkbox" name="cleaningSystem" id="" value="agr-vgnes-agdezit" />
+                          <div class="my-checkbox__new"></div>
+                          <span class="my-checkbox__text">Агрегат вгнесения агдезионной добавки</span>
+                        </label>
+                        <label class="my-checkbox">
+                          <input class="my-checkbox__old" type="checkbox" name="cleaningSystem" id="" value="sklad-min-poroshka" />
+                          <div class="my-checkbox__new"></div>
+                          <span class="my-checkbox__text">Склад минерального порошка с системой пневмотранспорта</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="quiz__final-step">
+                      <form action="" class="flex quiz__final-form">
+                        <input type="text" name="quizFinalName" id="" class="my-input" placeholder="Ваше имя" required>
+                        <input type="tel" name="quizFinalPhone" id="" class="my-input" placeholder="Телефон" required>
+                        <input type="email" name="quizFinalEmail" id="" class="my-input" placeholder="E-mail" required>
+                        <button type="submit" class="btn">Получить кп</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-number-pagination"></div>
+              </div>
+              <div class="flex quiz__control-btns">
+                <div class="swiper-pagination d-none d-md-flex"></div>
+                <div class="swiper-nav">
+                  <div class="swiper-btn-prev btn btn_noColor">Назад</div>
+                  <div class="swiper-btn-next btn">Далее</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-large border-bottom end-shipments">
+        <div class="my-container">
+          <header class="flex items-center justify-between">
+            <h2 class="mb-0">Завершённые отгрузки</h2>
+            <div class="swiper-nav d-none d-lg-flex">
+              <div class="swiper-btn-prev"></div>
+              <div class="swiper-btn-next"></div>
+            </div>
+          </header>
+          <div class="end-shipments__slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <a href="../product-page.html" class="swiper-slide">
+                  <div class="end-shipments__slide">
+                    <div class="end-shipments__slide-img-wrap">
+                      <img loading="lazy" src="../assets/images/end-shipments/slide-img-1.png" alt="#" />
+                    </div>
+                    <div class="end-shipments__slide-body">
+                      <h3 class="h3-large">Асфальтобетонный завод периодического действия</h3>
+                      <div class="end-shipments__slide-desc">
+                        <div class="end-shipments__desc-item">
+                          <div class="end-shipments__desc-label">Производительность</div>
+                          <span class="dots"></span>
+                          <div class="end-shipments__desc-value">50 т/ч</div>
+                        </div>
+                        <div class="end-shipments__desc-item">
+                          <div class="end-shipments__desc-label">Габариты</div>
+                          <span class="dots"></span>
+                          <div class="end-shipments__desc-value">50 т/ч</div>
+                        </div>
+                        <div class="end-shipments__desc-item">
+                          <div class="end-shipments__desc-label">Установленная мощность</div>
+                          <span class="dots"></span>
+                          <div class="end-shipments__desc-value">50 т/ч</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="../product-page.html" class="swiper-slide">
+                  <div class="end-shipments__slide">
+                    <div class="end-shipments__slide-img-wrap">
+                      <img loading="lazy" src="../assets/images/end-shipments/slide-img-2.png" alt="#" />
+                    </div>
+                    <div class="end-shipments__slide-body">
+                      <h3 class="h3-large">Мини АБЗ</h3>
+                      <div class="end-shipments__slide-desc">
+                        <div class="end-shipments__desc-item">
+                          <div class="end-shipments__desc-label">Производительность</div>
+                          <span class="dots"></span>
+                          <div class="end-shipments__desc-value">50 т/ч</div>
+                        </div>
+                        <div class="end-shipments__desc-item">
+                          <div class="end-shipments__desc-label">Габариты</div>
+                          <span class="dots"></span>
+                          <div class="end-shipments__desc-value">50 т/ч</div>
+                        </div>
+                        <div class="end-shipments__desc-item">
+                          <div class="end-shipments__desc-label">Установленная мощность</div>
+                          <span class="dots"></span>
+                          <div class="end-shipments__desc-value">50 т/ч</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="../product-page.html" class="swiper-slide">
+                  <div class="end-shipments__slide">
+                    <div class="end-shipments__slide-img-wrap">
+                      <img loading="lazy" src="../assets/images/end-shipments/slide-img-3.png" alt="#" />
+                    </div>
+                    <div class="end-shipments__slide-body">
+                      <h3 class="h3-large">Асфальтобетонный завод непрерывного действия</h3>
+                      <div class="end-shipments__slide-desc">
+                        <div class="end-shipments__desc-item">
+                          <div class="end-shipments__desc-label">Производительность</div>
+                          <span class="dots"></span>
+                          <div class="end-shipments__desc-value">50 т/ч</div>
+                        </div>
+                        <div class="end-shipments__desc-item">
+                          <div class="end-shipments__desc-label">Габариты</div>
+                          <span class="dots"></span>
+                          <div class="end-shipments__desc-value">50 т/ч</div>
+                        </div>
+                        <div class="end-shipments__desc-item">
+                          <div class="end-shipments__desc-label">Установленная мощность</div>
+                          <span class="dots"></span>
+                          <div class="end-shipments__desc-value">50 т/ч</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="../product-page.html" class="swiper-slide">
+                  <div class="end-shipments__slide">
+                    <div class="end-shipments__slide-img-wrap">
+                      <img loading="lazy" src="../assets/images/end-shipments/slide-img-1.png" alt="#" />
+                    </div>
+                    <div class="end-shipments__slide-body">
+                      <h3 class="h3-large">Асфальтобетонный завод периодического действия</h3>
+                      <div class="end-shipments__slide-desc">
+                        <div class="end-shipments__desc-item">
+                          <div class="end-shipments__desc-label">Производительность</div>
+                          <span class="dots"></span>
+                          <div class="end-shipments__desc-value">50 т/ч</div>
+                        </div>
+                        <div class="end-shipments__desc-item">
+                          <div class="end-shipments__desc-label">Габариты</div>
+                          <span class="dots"></span>
+                          <div class="end-shipments__desc-value">50 т/ч</div>
+                        </div>
+                        <div class="end-shipments__desc-item">
+                          <div class="end-shipments__desc-label">Установленная мощность</div>
+                          <span class="dots"></span>
+                          <div class="end-shipments__desc-value">50 т/ч</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination d-lg-none"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-large reviews bg-gray">
+        <div class="reviews__wrap">
+          <div class="my-container">
+            <header class="flex items-center justify-between">
+              <h2 class="mb-0">Наши клиенты о&nbsp;нас</h2>
+              <button class="btn d-none d-md-flex" data-modal-open="write-review">Оставить отзыв</button>
+            </header>
+            <div class="reviews__slider">
+              <div class="swiper">
+                <div class="swiper-wrapper align-stretch">
+                  <div class="swiper-slide">
+                    <div class="reviews__slide">
+                      <div class="reviews__slide-inner">
+                        <div class="reviews__slide-author">
+                          <div class="reviews__slide-author-texts">
+                            <div class="reviews__slide-author-company">ЗАО «ТехноАсфальт»</div>
+                            <div class="reviews__slide-author-name">Лаптева Елена Васильева</div>
+                          </div>
+                          <div class="reviews__slide-author-img">
+                            <img loading="lazy" src="" alt="#" />
+                            <span class="reviews__no-img"></span>
+                          </div>
+                        </div>
+                        <div class="reviews__slide-content">
+                          <div class="reviews__slide-text">
+                            <p>
+                              “Порадовало, что завод быстро окупился и дал стабильную загрузку. Отдельно хочется
+                              отметить сервис — всё оперативно и по делу. Рекомендуем!”
+                            </p>
+                          </div>
+                          <div class="reviews__slide-galery">
+                            <a href="../assets/images/reviews/img-2.jpg" data-fancybox="review-1">
+                              <img loading="lazy" src="../assets/images/reviews/img-2.jpg" alt="#" />
+                            </a>
+                            <a href="../assets/images/reviews/img-3.png" data-fancybox="review-1">
+                              <img loading="lazy" src="../assets/images/reviews/img-3.png" alt="#" />
+                            </a>
+                            <a href="../assets/images/reviews/img-1.png" data-fancybox="review-1">
+                              <img loading="lazy" src="../assets/images/reviews/img-1.png" alt="#" />
+                            </a>
+                            <a href="../assets/images/reviews/img-2.jpg" data-fancybox="review-1" class="more">
+                              <div class="overlay">+2</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reviews__slide">
+                      <div class="reviews__slide-inner">
+                        <div class="reviews__slide-author">
+                          <div class="reviews__slide-author-texts">
+                            <div class="reviews__slide-author-company">ЗАО «АсфальтСервис»</div>
+                            <div class="reviews__slide-author-name">Герасимов Василий Петрович</div>
+                          </div>
+                          <div class="reviews__slide-author-img">
+                            <img loading="lazy" src="" alt="#" />
+                            <span class="reviews__no-img"></span>
+                          </div>
+                        </div>
+                        <div class="reviews__slide-content">
+                          <div class="reviews__slide-text">
+                            <p>
+                              “Завод полностью оправдал ожидания: качественная сборка, быстрая установка и обучение
+                              персонала. Уже с первых месяцев началась прибыль. Спасибо за профессиональный подход!”
+                            </p>
+                          </div>
+                          <div class="reviews__slide-galery">
+                            <a href="../assets/images/pages/main/hero-section/slide-img-2.png" data-fancybox="review-2">
+                              <img
+                                loading="lazy"
+                                src="../assets/images/pages/main/hero-section/slide-img-2.png"
+                                alt="#"
+                              />
+                            </a>
+                            <a href="../assets/images/reviews/img-3.png" data-fancybox="review-2">
+                              <img loading="lazy" src="../assets/images/reviews/img-3.png" alt="#" />
+                            </a>
+                            <a href="../assets/images/reviews/img-1.jpg" data-fancybox="review-2">
+                              <img loading="lazy" src="../assets/images/reviews/img-1.jpg" alt="#" />
+                            </a>
+                            <a
+                              href="../assets/images/pages/main/hero-section/slide-img-2.png"
+                              data-fancybox="review-2"
+                              class="more"
+                            >
+                              <div class="overlay">+2</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reviews__slide">
+                      <div class="reviews__slide-inner">
+                        <div class="reviews__slide-author">
+                          <div class="reviews__slide-author-texts">
+                            <div class="reviews__slide-author-company">ЗАО «ТехноАсфальт»</div>
+                            <div class="reviews__slide-author-name">Лаптева Елена Васильева</div>
+                          </div>
+                          <div class="reviews__slide-author-img">
+                            <img loading="lazy" src="" alt="#" />
+                            <span class="reviews__no-img"></span>
+                          </div>
+                        </div>
+                        <div class="reviews__slide-content">
+                          <div class="reviews__slide-text">
+                            <p>
+                              “Порадовало, что завод быстро окупился и дал стабильную загрузку. Отдельно хочется
+                              отметить сервис — всё оперативно и по делу. Рекомендуем!”
+                            </p>
+                          </div>
+                          <div class="reviews__slide-galery">
+                            <a href="../assets/images/reviews/img-2.jpg" data-fancybox="review-3">
+                              <img loading="lazy" src="../assets/images/reviews/img-2.jpg" alt="#" />
+                            </a>
+                            <a href="../assets/images/reviews/img-3.png" data-fancybox="review-3">
+                              <img loading="lazy" src="../assets/images/reviews/img-3.png" alt="#" />
+                            </a>
+                            <a href="../assets/images/reviews/img-1.png" data-fancybox="review-3">
+                              <img loading="lazy" src="../assets/images/reviews/img-1.png" alt="#" />
+                            </a>
+                            <a href="../assets/images/reviews/img-2.jpg" data-fancybox="review-3" class="more">
+                              <div class="overlay">+2</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reviews__slide">
+                      <div class="reviews__slide-inner">
+                        <div class="reviews__slide-author">
+                          <div class="reviews__slide-author-texts">
+                            <div class="reviews__slide-author-company">ООО «ПромСтрой»</div>
+                            <div class="reviews__slide-author-name">Петров Иван Семенович</div>
+                          </div>
+                          <div class="reviews__slide-author-img">
+                            <img loading="lazy" src="../assets/images/pages/main/news/block-img.jpg" alt="#" />
+                            <span class="reviews__no-img"></span>
+                          </div>
+                        </div>
+                        <div class="reviews__slide-content">
+                          <div class="reviews__slide-text"></div>
+                          <a
+                            href="../assets/images/my-video.mp4"
+                            data-fancybox="review-4"
+                            class="video-poster"
+                          >
+                            <div class="video-poster__icon"></div>
+                            <div class="video-poster__texts">
+                              <div class="video-poster__lable">Смотреть видео-отзыв</div>
+                              <div class="video-poster__time">2:34</div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reviews__slide">
+                      <div class="reviews__slide-inner">
+                        <div class="reviews__slide-author">
+                          <div class="reviews__slide-author-texts">
+                            <div class="reviews__slide-author-company">ЗАО «ТехноАсфальт»</div>
+                            <div class="reviews__slide-author-name">Лаптева Елена Васильева</div>
+                          </div>
+                          <div class="reviews__slide-author-img">
+                            <img loading="lazy" src="" alt="#" />
+                            <span class="reviews__no-img"></span>
+                          </div>
+                        </div>
+                        <div class="reviews__slide-content">
+                          <div class="reviews__slide-text">
+                            <p>
+                              “Завод полностью оправдал ожидания: качественная сборка, быстрая установка и обучение
+                              персонала. Уже с первых месяцев началась прибыль. Спасибо за профессиональный подход!”
+                            </p>
+                          </div>
+                          <div class="reviews__slide-galery">
+                            <a href="../assets/images/pages/main/hero-section/slide-img-2.png" data-fancybox="review-4">
+                              <img
+                                loading="lazy"
+                                src="../assets/images/pages/main/hero-section/slide-img-2.png"
+                                alt="#"
+                              />
+                            </a>
+                            <a href="../assets/images/reviews/img-3.png" data-fancybox="review-4">
+                              <img loading="lazy" src="../assets/images/reviews/img-3.png" alt="#" />
+                            </a>
+                            <a href="../assets/images/reviews/img-1.jpg" data-fancybox="review-4">
+                              <img loading="lazy" src="../assets/images/reviews/img-1.png" alt="#" />
+                            </a>
+                            <a
+                              href="../assets/images/pages/main/hero-section/slide-img-2.png"
+                              data-fancybox="review-4"
+                              class="more"
+                            >
+                              <div class="overlay">+2</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-nav d-none d-lg-flex">
+                <div class="swiper-btn-prev"></div>
+                <div class="swiper-btn-next"></div>
+              </div>
+              <div class="swiper-pagination d-lg-none"></div>
+            </div>
+            <button class="btn d-md-none mobile-btn">Все отзывы</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-large our-services">
+        <div class="my-container">
+          <h2> Наши <br /> услуги
+          </h2>
+          <div class="our-services__item">
+            <div class="our-services__item-inner">
+              <div class="our-services__item-icon">
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14.6047 17.6154V16C14.1791 16 13.7709 16.1702 13.47 16.4731C13.1691 16.7761 13 17.187 13 17.6154H14.6047ZM38.1395 17.6154H39.7442C39.7442 17.187 39.5751 16.7761 39.2742 16.4731C38.9733 16.1702 38.5651 16 38.1395 16V17.6154ZM38.1395 30.5389V28.9235C37.714 28.9235 37.3058 29.0937 37.0049 29.3966C36.7039 29.6996 36.5349 30.1105 36.5349 30.5389H38.1395ZM14.6047 19.2309H38.1395V16H14.6047V19.2309ZM36.5349 17.6154V52.078H39.7442V17.6154H36.5349ZM16.2093 47.7702V17.6154H13V47.7702H16.2093ZM38.1395 32.1543H48.8372V28.9235H38.1395V32.1543ZM55.7907 39.1545V47.7702H59V39.1545H55.7907ZM39.7442 52.078V30.5389H36.5349V52.078H39.7442ZM50.7286 53.9821C50.4802 54.2322 50.1853 54.4305 49.8608 54.5659C49.5363 54.7012 49.1885 54.7709 48.8372 54.7709C48.4859 54.7709 48.1381 54.7012 47.8136 54.5659C47.4891 54.4305 47.1942 54.2322 46.9459 53.9821L44.678 56.2652C45.7814 57.376 47.2779 58 48.8383 58C50.3987 58 51.8952 57.376 52.9986 56.2652L50.7286 53.9821ZM46.9459 50.174C47.1942 49.9239 47.4891 49.7255 47.8136 49.5901C48.1381 49.4548 48.4859 49.3851 48.8372 49.3851C49.1885 49.3851 49.5363 49.4548 49.8608 49.5901C50.1853 49.7255 50.4802 49.9239 50.7286 50.174L52.9965 47.8908C51.8931 46.78 50.3966 46.156 48.8361 46.156C47.2757 46.156 45.7792 46.78 44.6758 47.8908L46.9459 50.174ZM25.0541 53.9821C24.8058 54.2322 24.5109 54.4305 24.1864 54.5659C23.8619 54.7012 23.5141 54.7709 23.1628 54.7709C22.8115 54.7709 22.4637 54.7012 22.1392 54.5659C21.8147 54.4305 21.5198 54.2322 21.2714 53.9821L19.0035 56.2652C20.1069 57.376 21.6034 58 23.1639 58C24.7243 58 26.2208 57.376 27.3242 56.2652L25.0541 53.9821ZM21.2714 50.174C21.5198 49.9239 21.8147 49.7255 22.1392 49.5901C22.4637 49.4548 22.8115 49.3851 23.1628 49.3851C23.5141 49.3851 23.8619 49.4548 24.1864 49.5901C24.5109 49.7255 24.8058 49.9239 25.0541 50.174L27.322 47.8908C26.2186 46.78 24.7221 46.156 23.1617 46.156C21.6013 46.156 20.1048 46.78 19.0014 47.8908L21.2714 50.174ZM50.7286 50.174C51.2506 50.6995 51.5116 51.3866 51.5116 52.078H54.7209C54.7209 50.5638 54.1454 49.0453 52.9986 47.8887L50.7286 50.174ZM51.5116 52.078C51.5116 52.7694 51.2506 53.4565 50.7286 53.9821L52.9986 56.2652C53.546 55.7161 53.978 55.0635 54.2739 54.3449C54.5699 53.6263 54.7218 52.8559 54.7209 52.078H51.5116ZM44.5581 50.4626H38.1395V53.6934H44.5581V50.4626ZM46.9459 53.9821C46.6966 53.7327 46.499 53.436 46.3646 53.1091C46.2301 52.7823 46.1616 52.4318 46.1628 52.078H42.9535C42.9535 53.5922 43.529 55.1107 44.6758 56.2674L46.9459 53.9821ZM46.1628 52.078C46.1628 51.3866 46.4238 50.6995 46.9459 50.174L44.6758 47.8908C44.1284 48.4399 43.6964 49.0925 43.4005 49.8111C43.1045 50.5297 42.9526 51.3001 42.9535 52.078H46.1628ZM21.2714 53.9821C21.0222 53.7327 20.8246 53.436 20.6901 53.1091C20.5557 52.7823 20.4871 52.4318 20.4884 52.078H17.2791C17.2791 53.5922 17.8546 55.1107 19.0014 56.2674L21.2714 53.9821ZM20.4884 52.078C20.4884 51.3866 20.7494 50.6995 21.2714 50.174L19.0035 47.8908C18.4562 48.4399 18.022 49.0925 17.7261 49.8111C17.4301 50.5297 17.2782 51.3001 17.2791 52.078H20.4884ZM38.1395 50.4626H27.4419V53.6934H38.1395V50.4626ZM25.0541 50.174C25.5762 50.6995 25.8372 51.3866 25.8372 52.078H29.0465C29.0465 50.5638 28.471 49.0453 27.3242 47.8887L25.0541 50.174ZM25.8372 52.078C25.8372 52.7694 25.5762 53.4565 25.0541 53.9821L27.322 56.2652C27.8694 55.7161 28.3036 55.0635 28.5995 54.3449C28.8955 53.6263 29.0474 52.8559 29.0465 52.078H25.8372ZM55.7907 47.7702C55.7907 49.2564 54.5926 50.4626 53.1163 50.4626V53.6934C54.6767 53.6934 56.1733 53.0694 57.2767 51.9586C58.3801 50.8477 59 49.3411 59 47.7702H55.7907ZM48.8372 32.1543C50.6814 32.1543 52.45 32.8919 53.7541 34.2046C55.0581 35.5174 55.7907 37.298 55.7907 39.1545H59C59 36.4411 57.9293 33.8388 56.0234 31.9201C54.1175 30.0014 51.5326 28.9235 48.8372 28.9235V32.1543ZM13 47.7702C13 49.3411 13.6199 50.8477 14.7233 51.9586C15.8267 53.0694 17.3233 53.6934 18.8837 53.6934V50.4626C17.4074 50.4626 16.2093 49.2564 16.2093 47.7702H13Z"
+                    fill="#E74F10" />
+                </svg>
+              </div>
+              <div class="our-services__item-body">
+                <div class="h3-large">Доставка</div>
+                <p>Надежно, точно в срок и с учетом всех требований производства.</p>
+              </div>
+            </div>
+          </div>
+          <div class="our-services__item">
+            <div class="our-services__item-inner">
+              <div class="our-services__item-icon">
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M29.8897 14.0001C26.873 13.9899 23.9196 14.8619 21.3954 16.5081L31.4627 26.5399C31.7979 26.825 32.0726 27.174 32.2704 27.5665C32.4682 27.9589 32.5853 28.3869 32.6146 28.8251C32.6439 29.2633 32.5849 29.7029 32.4411 30.1181C32.2973 30.5332 32.0716 30.9155 31.7773 31.2424C31.4492 31.5357 31.0656 31.7606 30.649 31.9039C30.2324 32.0472 29.7912 32.106 29.3514 32.0768C28.9117 32.0476 28.4822 31.9309 28.0884 31.7338C27.6946 31.5367 27.3443 31.263 27.0582 30.9289L16.6764 20.897C14.8814 23.529 13.9474 26.6499 14.0023 29.8316C14.0189 34.0254 15.698 38.0426 18.6739 41.008C21.6498 43.9734 25.6812 45.6467 29.8897 45.6632C31.2668 45.6692 32.6398 45.5113 33.9795 45.193L44.5186 55.6951C45.9996 57.1709 48.0083 58 50.1028 58C52.1973 58 54.2059 57.1709 55.687 55.6951C57.168 54.2193 58 52.2176 58 50.1305C58 48.0434 57.168 46.0418 55.687 44.566L45.1478 34.0638C45.4673 32.7289 45.6257 31.3608 45.6197 29.9884C45.6616 27.9037 45.2856 25.8317 44.5139 23.8936C43.7421 21.9555 42.5901 20.1903 41.1252 18.7014C39.6604 17.2125 37.9121 16.0298 35.9829 15.2225C34.0536 14.4153 31.9821 13.9997 29.8897 14.0001ZM42.4737 29.8316C42.4716 30.9455 42.3128 32.0535 42.0018 33.1234L41.5299 34.8476L42.7883 36.1016L53.3274 46.6037C53.7763 47.0271 54.1334 47.5376 54.3769 48.1037C54.6203 48.6698 54.745 49.2795 54.7432 49.8954C54.7609 50.5136 54.6434 51.1282 54.399 51.6966C54.1545 52.265 53.7889 52.7736 53.3274 53.1871C52.9014 53.6329 52.3889 53.9878 51.8211 54.2303C51.2533 54.4728 50.6419 54.5978 50.0241 54.5978C49.4064 54.5978 48.795 54.4728 48.2272 54.2303C47.6594 53.9878 47.1469 53.6329 46.7208 53.1871L36.1817 42.685L34.9233 41.431L33.193 41.9013C32.1193 42.2111 31.0074 42.3694 29.8897 42.3715C26.5471 42.3622 23.3364 41.0713 20.9235 38.7663C19.7033 37.6221 18.7369 36.236 18.0867 34.6972C17.4365 33.1584 17.1169 31.501 17.1483 29.8316C17.1499 28.6663 17.3086 27.5064 17.6202 26.3832L24.5414 33.2801C25.1263 33.9143 25.8319 34.4261 26.6173 34.7857C27.4027 35.1454 28.252 35.3456 29.1159 35.3748C29.9797 35.404 30.8407 35.2615 31.6487 34.9557C32.4567 34.6499 33.1956 34.1869 33.8222 33.5936C34.4175 32.9692 34.8822 32.233 35.1891 31.4278C35.496 30.6226 35.6389 29.7646 35.6096 28.9038C35.5804 28.043 35.3794 27.1967 35.0185 26.4141C34.6576 25.6314 34.144 24.9282 33.5076 24.3455L26.5863 17.4485C27.604 17.1292 28.6655 16.9705 29.7324 16.9783C33.0749 16.9876 36.2856 18.2785 38.6985 20.5835C41.1122 23.0621 42.4658 26.3779 42.4737 29.8316Z"
+                    fill="#E74F10" />
+                </svg>
+              </div>
+              <div class="our-services__item-body">
+                <div class="h3-large">Монтаж</div>
+                <p>Быстро и качественно осуществляем монтаж завода.</p>
+              </div>
+            </div>
+          </div>
+          <div class="our-services__item">
+            <div class="our-services__item-inner">
+              <div class="our-services__item-icon">
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M18 51.5556V20.4444C18 19.2657 18.4683 18.1352 19.3017 17.3017C20.1352 16.4683 21.2657 16 22.4444 16H52.2222C52.5758 16 52.915 16.1405 53.165 16.3905C53.4151 16.6406 53.5556 16.9797 53.5556 17.3333V46.4756M22.4444 47.1111H53.5556M22.4444 56H53.5556"
+                    stroke="#E74F10" stroke-width="3" stroke-linecap="round" />
+                  <path
+                    d="M22.4444 56.0002C21.2657 56.0002 20.1352 55.532 19.3017 54.6985C18.4683 53.865 18 52.7345 18 51.5558C18 50.377 18.4683 49.2466 19.3017 48.4131C20.1352 47.5796 21.2657 47.1113 22.4444 47.1113"
+                    stroke="#E74F10" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M29.111 24.8887H42.4443" stroke="#E74F10" stroke-width="3" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="our-services__item-body">
+                <div class="h3-large">Обучение персонала</div>
+                <p>Гарантируем полное освоение оборудования.</p>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn_noColor">Узнать подробнее</button>
+        </div>
+      </section>
+
+      <!-- блок шаблонный(можно вынести отдельно один раз и использовать на страницах - сделать шаблоном) -->
+      <section class="pb-large feedback-block">
+        <div class="feedback-block__red-line">
+          <div class="my-container">
+            <span>эффективно</span>
+            <span>»</span>
+            <span>функционально</span>
+            <span>»</span>
+            <span>надежно</span>
+          </div>
+        </div>
+        <div class="feedback-block__body">
+          <div class="my-container">
+            <div class="feedback-block__texts">
+              <div class="big-h2">Звоните нам по телефону <br /> <span>и выводите ваш бизнес на новый уровень качества и&nbsp;прибыльности!</span></div>
+              <div class="flex flex-column feedback-block__contacts">
+                <a href="tel:+73512207086" class="big-h2">8 (351) 220-70-86</a>
+                <a href="mailto:ekodor74@mail.ru">ekodor74@mail.ru</a>
+              </div>
+            </div>
+            <div class="feedback-block__form-wrap my-form__wrap">
+              <form action="" class="flex flex-column my-form feedback-block__form">
+                <div class="my-form__title"> Отправьте заявку и мы <br /> в&nbsp;ближайшее время с&nbsp;вами свяжемся!
+                </div>
+                <div class="my-form__body">
+                  <div class="flex flex-column my-form__inputs">
+                    <input type="text" name="name" id="feedbackName" class="my-input" placeholder="Ваше имя" required />
+                    <input type="tel" name="" id="" class="my-input" placeholder="Телефон" required />
+                    <input type="email" name="" id="" class="my-input" placeholder="E-mail" required />
+                  </div>
+                  <div class="flex flex-column my-form__bottom">
+                    <button class="btn" type="submit">получить кп</button>
+                    <div class="agreement-text">Нажимая на кнопку “Отправить заявку”, я даю согласие <a href="http://" target="_blank" rel="noopener noreferrer">на обработку персональных данных</a></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-large why-choos-us">
+        <div class="my-container">
+          <h2 class="d-none">Почему выбирают&nbsp;нас</h2>
+          <div class="why-choos-us__items">
+            <div class="why-choos-us__item">
+              <div class="why-choos-us__item-inner">
+                <div class="why-choos-us__item-icon">
+                  <svg width="72" height="72">
+                    <use xlink:href="../assets/images/icons/sprite.svg#icon-garage"></use>
+                  </svg>
+                </div>
+                <div class="why-choos-us__item-body">
+                  <div class="h3-large">Собственное производство</div>
+                  <p>Гарантия качества и контроля <br /> на каждом этапе создания <br /> продукции.</p>
+                </div>
+              </div>
+            </div>
+            <div class="why-choos-us__item">
+              <div class="why-choos-us__item-inner">
+                <div class="why-choos-us__item-icon">
+                  <svg width="72" height="72">
+                    <use xlink:href="../assets/images/icons/sprite.svg#icon-star"></use>
+                  </svg>
+                </div>
+                <div class="why-choos-us__item-body">
+                  <div class="h3-large">Качество</div>
+                  <p>Поставляем только качественную продукцию, так как дорожим и <br /> своим именем, и репутацией.</p>
+                </div>
+              </div>
+            </div>
+            <div class="why-choos-us__item">
+              <div class="why-choos-us__item-inner">
+                <div class="why-choos-us__item-icon">
+                  <svg width="72" height="72">
+                    <use xlink:href="../assets/images/icons/sprite.svg#icon-calendar"></use>
+                  </svg>
+                </div>
+                <div class="why-choos-us__item-body">
+                  <div class="h3-large">Опыт</div>
+                  <p>25 лет успешной работы на рынке — наш опыт, проверенный временем.</p>
+                </div>
+              </div>
+            </div>
+            <div class="why-choos-us__item">
+              <div class="why-choos-us__item-inner">
+                <div class="why-choos-us__item-icon">
+                  <svg width="72" height="72">
+                    <use xlink:href="../assets/images/icons/sprite.svg#icon-group"></use>
+                  </svg>
+                </div>
+                <div class="why-choos-us__item-body">
+                  <div class="h3-large">Индивидуальный подход</div>
+                  <p>Индивидуальный подход — решения, которые учитывают ваши уникальные потребности.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="my-container">
+        <div class="flex footer__inner">
+          <div class="footer__left">
+            <a href="../index.html" class="footer__logo-wrap">
+              <img loading="lazy" src="../assets/images/logo.svg" alt="логотип" />
+            </a>
+            <p class="footer__left-text"> Надежные решения для строительной и дорожной отрасли с 2001 года! <br /> Продукция адаптирована для нашего климата и условий эксплуатации.
+            </p>
+          </div>
+          <div class="flex justify-between footer__right">
+            <nav class="footer__nav">
+              <ul class="flex flex-column footer__menu">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../products.html">Каталог</a></li>
+                <li><a href="">О компании</a></li>
+                <li><a href="../products.html">Услуги</a></li>
+                <li><a href="">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="flex flex-column footer__contacts">
+              <div class="footer__main-contacts">
+                <div class="footer__contact-link">
+                  <div class="icon">
+                    <svg viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="23.5" cy="23.5" r="23.5" fill="white" />
+                      <path d="M24.0001 14C19.5891 14 16.0001 17.589 16.0001 21.995C15.9711 28.44 23.6961 33.784 24.0001 34C24.0001 34 32.0291 28.44 32.0001 22C32.0001 17.589 28.4111 14 24.0001 14ZM24.0001 26C21.7901 26 20.0001 24.21 20.0001 22C20.0001 19.79 21.7901 18 24.0001 18C26.2101 18 28.0001 19.79 28.0001 22C28.0001 24.21 26.2101 26 24.0001 26Z" fill="#E74F10" />
+                    </svg>
+                  </div> Челябинская обл., г. Верхний <br /> Уфалей, ул. Гранильная, 2
+                </div>
+                <a href="tel:+73512207086" class="footer__contact-link">
+                  <div class="icon">
+                    <svg viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="23.5" cy="23.5" r="23.5" fill="white" />
+                      <path d="M18.62 22.79C20.06 25.62 22.38 27.93 25.21 29.38L27.41 27.18C27.68 26.91 28.08 26.82 28.43 26.94C29.55 27.31 30.76 27.51 32 27.51C32.55 27.51 33 27.96 33 28.51V32C33 32.55 32.55 33 32 33C22.61 33 15 25.39 15 16C15 15.45 15.45 15 16 15H19.5C20.05 15 20.5 15.45 20.5 16C20.5 17.25 20.7 18.45 21.07 19.57C21.18 19.92 21.1 20.31 20.82 20.59L18.62 22.79Z" fill="#E74F10" />
+                    </svg>
+                  </div> 8 (351) 220-70-86
+                </a>
+                <a href="mailto:ekodor74@mail.ru" class="footer__contact-link">
+                  <div class="icon">
+                    <svg viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="23.5" cy="23.5" r="23.5" fill="white" />
+                      <path d="M30.667 20.6668L24.0003 24.8335L17.3337 20.6668V19.0002L24.0003 23.1668L30.667 19.0002M30.667 17.3335H17.3337C16.4087 17.3335 15.667 18.0752 15.667 19.0002V29.0002C15.667 29.4422 15.8426 29.8661 16.1551 30.1787C16.4677 30.4912 16.8916 30.6668 17.3337 30.6668H30.667C31.109 30.6668 31.5329 30.4912 31.8455 30.1787C32.1581 29.8661 32.3337 29.4422 32.3337 29.0002V19.0002C32.3337 18.5581 32.1581 18.1342 31.8455 17.8217C31.5329 17.5091 31.109 17.3335 30.667 17.3335Z" fill="#E74F10" />
+                    </svg>
+                  </div> ekodor74@mail.ru
+                </a>
+              </div>
+              <div class="footer__cmd socials">
+                <div class="socials__wrap">
+                  <a href="#" class="socials__vk" aria-label="ВКонтакте"></a>
+                </div>
+                <div class="socials__wrap">
+                  <a href="#" class="socials__yt" aria-label="YouTube"></a>
+                </div>
+                <div class="socials__wrap">
+                  <a href="#" class="socials__tg" aria-label="Telegram"></a>
+                </div>
+                <div class="socials__wrap">
+                  <a href="#" class="socials__wa" aria-label="WhatsApp"></a>
+                </div>
+              </div>
+              <div class="footer__end-texts">
+                <p>2001-2025 © «ЭКОДОР» Все права защищены.</p>
+                <a href="#" class="footer__policy">Политика конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <div class="my-modal" data-modal-id="give-feedback">
+      <div class="my-modal__container">
+        <button class="close-modal-button"></button>
+        <div class="flex flex-column my-modal__content">
+          <form action="" class="flex flex-column my-form my-modal__form">
+            <div class="my-form__title">Получить консультацию</div>
+            <div class="my-form__body">
+              <div class="flex flex-column my-form__inputs">
+                <input type="text" name="name" id="feedbackName" class="my-input" placeholder="Ваше имя" required />
+                <input type="tel" name="" id="" class="my-input" placeholder="Название компании" required />
+                <input type="email" name="" id="" class="my-input" placeholder="E-mail" required />
+                <textarea name="" id="" placeholder="Комментарий"></textarea>
+              </div>
+              <div class="flex flex-column my-form__bottom">
+                    <button class="btn" type="submit">Получить консультацию</button>
+                    <div class="agreement-text">Нажимая на кнопку “Отправить заявку”, я даю согласие <a href="http://" target="_blank" rel="noopener noreferrer">на обработку персональных данных</a></div>
+                  </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="my-modal" data-modal-id="write-application">
+      <div class="my-modal__container">
+        <button class="close-modal-button"></button>
+        <div class="flex flex-column my-modal__content">
+          <form action="" class="flex flex-column my-form my-modal__form">
+            <div class="my-form__title">Написать заявку</div>
+            <div class="my-form__body">
+              <div class="flex flex-column my-form__inputs">
+                <input type="text" name="name" id="feedbackName" class="my-input" placeholder="Ваше имя" required />
+                <input type="tel" name="" id="" class="my-input" placeholder="Название компании" required />
+                <input type="email" name="" id="" class="my-input" placeholder="E-mail" required />
+                <textarea name="" id="" placeholder="Комментарий"></textarea>
+              </div>
+              <div class="flex flex-column my-form__bottom">
+                    <button class="btn" type="submit">Отправить заявку</button>
+                    <div class="agreement-text">Нажимая на кнопку “Отправить заявку”, я даю согласие <a href="http://" target="_blank" rel="noopener noreferrer">на обработку персональных данных</a></div>
+                  </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="my-modal" data-modal-id="write-review">
+      <div class="my-modal__container">
+        <button class="close-modal-button"></button>
+        <div class="flex flex-column my-modal__content">
+          <form action="" class="flex flex-column my-form my-modal__form">
+            <div class="my-form__title">Оставить отзыв</div>
+            <div class="my-form__body">
+              <div class="flex flex-column my-form__inputs">
+                <input type="text" name="name" id="feedbackName" class="my-input" placeholder="Ваше имя" required />
+                <input type="tel" name="" id="" class="my-input" placeholder="Название компании" required />
+                <input type="email" name="" id="" class="my-input" placeholder="E-mail" required />
+                <textarea name="" id="" placeholder="Комментарий"></textarea>
+              </div>
+              <div class="flex flex-column my-form__bottom">
+                    <button class="btn" type="submit">Отправить отзыв</button>
+                    <div class="agreement-text">Нажимая на кнопку “Отправить заявку”, я даю согласие <a href="http://" target="_blank" rel="noopener noreferrer">на обработку персональных данных</a></div>
+                  </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    
+    <!-- СКРИПТЫ БИБЛИОТЕК -->
+    <script src="../assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/libs/fancybox/fancybox.umd.js" defer></script>
+
+    <!-- взял своё api для карт яндекса -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f028c4f8-776d-4ba3-b079-94a909b9cca1&lang=ru_RU" defer></script>
+
+    <!-- ОБЩИЕ СКРИПТЫ -->
+    <script src="../assets/scripts/my-scripts.js" defer></script>
+
+
+    <!-- ПЕРВЫЙ БЛОК С ОПИСАНИЕМ -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        let mainSwiper;
+        let thumbsSwiper;
+
+        const switchButtons = document.querySelectorAll('.product-gallery__switch-btn');
+        const gallery = document.querySelector('.product-gallery');
+
+        function initSwipers(type) {
+          const mainSlides = gallery.querySelectorAll('.product-gallery__main-slider .swiper-slide, .product-gallery__main-slider [data-type]');
+          const thumbSlides = gallery.querySelectorAll('.product-gallery__thumb-slider .swiper-slide, .product-gallery__thumb-slider [data-type]');
+
+          // Удаляем Swiper, если уже создан
+          if (mainSwiper) mainSwiper.destroy(true, true);
+          if (thumbsSwiper) thumbsSwiper.destroy(true, true);
+
+          // Переключаем классы swiper-slide
+          mainSlides.forEach(slide => {
+            if (slide.dataset.type === type) {
+              slide.classList.add('swiper-slide');
+              slide.style.display = 'block';
+            } else {
+              slide.classList.remove('swiper-slide');
+              slide.style.display = 'none';
+            }
+          });
+
+          thumbSlides.forEach(slide => {
+            if (slide.dataset.type === type) {
+              slide.classList.add('swiper-slide');
+              slide.style.display = 'block';
+            } else {
+              slide.classList.remove('swiper-slide');
+              slide.style.display = 'none';
+            }
+          });
+
+          // Переинициализация Swiper'ов
+          thumbsSwiper = new Swiper('.product-gallery__thumb-slider .swiper', {
+            slidesPerView: 5,
+            spaceBetween: 7,
+            watchSlidesProgress: true,
+            allowTouchMove: true,
+          });
+
+          mainSwiper = new Swiper('.product-gallery__main-slider .swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            autoHeight: true,
+            allowTouchMove: true,
+            navigation: {
+              nextEl: '.product-gallery__main-slider .swiper-btn-next',
+              prevEl: '.product-gallery__main-slider .swiper-btn-prev',
+            },
+            pagination: {
+              el: ".product-gallery__main-slider .swiper-pagination",
+              clickable: true,
+            },
+            thumbs: { swiper: thumbsSwiper },
+          });
+        }
+
+        // Смена типа (фото / видео)
+        switchButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            switchButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const type = btn.dataset.activeType;
+            initSwipers(type);
+          });
+        });
+
+        // Инициализация при загрузке
+        initSwipers('image');
+
+        Fancybox.bind(".product-gallery [data-fancybox]", {
+          Carousel: {
+            Thumbs: {
+              type: "classic",
+              autoStart: true,
+            },
+            Toolbar: {
+              display: {
+                left: ["counter"],
+                middle: [],
+                right: ["close"],
+              },
+            },
+          },
+        });
+      });
+    </script>
+
+
+    <!-- ИНИЦИАЛИЗАЦИЯ БЛОКА С ВОПРОСАМИ -->
+    <script>
+      const slides = document.querySelectorAll('.quiz .swiper-slide');
+      const quizSwiper = new Swiper(".quiz .swiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoHeight: true,
+        allowTouchMove: true,
+        effect: "fade",
+        fadeEffect: { crossFade: true },
+        speed: 400,
+        pagination: {
+          el: ".quiz .swiper-pagination",
+          clickable: false,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + ' bullet-step"></span>';
+          },
+        },
+        navigation: {
+          nextEl: ".quiz .swiper-btn-next",
+          prevEl: ".quiz .swiper-btn-prev",
+        },
+        on: {
+          init: function () {
+            updateFractionPagination(this);
+          },
+          slideChange: function () {
+            updateFractionPagination(this);
+            handleFinalStep(this);
+          },
+        },
+      });
+
+      function updateFractionPagination(swiper) {
+        const current = swiper.realIndex + 1;
+        const total = swiper.slides.length;
+        const fractionEl = document.querySelector(".quiz .swiper-number-pagination");
+        if (fractionEl) {
+          fractionEl.innerHTML = `Вопрос <span>${current}</span> / <span>${total}</span>`;
+        }
+      }
+
+      // обработка точек пагинации
+      let lastIndex = quizSwiper.activeIndex;
+      quizSwiper.on('slideChange', function () {
+        const bullets = document.querySelectorAll('.swiper-pagination .bullet-step');
+
+        if (this.activeIndex > lastIndex) {
+          bullets[this.activeIndex - 1].classList.add('passed');
+        } else if (this.activeIndex < lastIndex) {
+          bullets[lastIndex].classList.remove('passed');
+        }
+
+        lastIndex = this.activeIndex;
+      });
+
+      document.querySelector('.swiper-btn-next').addEventListener('click', () => {
+        handleFinalStep(quizSwiper);
+      });
+
+      // функция для финального шага
+      function handleFinalStep(swiper) {
+        if (swiper.activeIndex === slides.length - 1) {
+          document.querySelector('.quiz__control-btns').style.display = 'none';
+          document.querySelector('.quiz .swiper-number-pagination').style.display = 'none';
+          document.querySelector('.quiz__title').classList.add('hidden');
+          document.querySelector('.quiz__final-title').classList.add('active');
+          document.querySelector('.quiz__final-step').classList.add('active');
+          swiper.allowTouchMove = false;
+        }
+      }
+    </script>
+  </body>
+</html>

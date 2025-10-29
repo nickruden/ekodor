@@ -1,0 +1,86 @@
+input,
+textarea {
+    padding: 1.97rem 2.3rem;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: var(--color-black);
+    background-color: #F5F5F5;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 100%;
+}
+
+@media (max-width: 769px) {
+
+    input,
+    textarea {
+        padding: 1.62rem 2.1rem;
+        font-size: 1.4rem;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+input.no-valid,
+textarea.no-valid {
+    color: var(--color-red) !important;
+    border-color: var(--color-red) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #484848;
+}
+
+input.no-valid::placeholder,
+textarea.no-valid::placeholder {
+    color: var(--color-red) !important;
+}
+
+
+.search-input {
+    padding: 0rem 1.2rem 2.12rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-input::before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2938 14.5697 18.0025 12.8204 18 11C18 7.133 14.867 4 11 4C7.133 4 4 7.133 4 11C4 14.867 7.133 18 11 18C12.8204 18.0025 14.5697 17.2938 15.875 16.025L16.025 15.875Z' fill='%23E74F10'/%3E%3C/svg%3E");
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 0;
+    margin-right: 1.7rem;
+}
+
+.search-input input {
+    padding: 0rem;
+    font-family: "Unbounded", "Courier New", Courier, monospace;
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: 400;
+    color: var(--color-black);
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+    display: block;
+    flex: 1;
+}
+
+.search-input input::placeholder {
+    color: #787878;
+}

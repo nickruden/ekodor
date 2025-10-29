@@ -1,0 +1,67 @@
+.my-breadcrumbs {
+    padding-top: 2rem;
+    padding-bottom: 5.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 1199px) {
+    .my-breadcrumbs {
+        padding-bottom: 4rem;
+    }
+}
+
+@media (max-width: 769px) {
+    .my-breadcrumbs {
+        padding-bottom: 3rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .my-breadcrumbs {
+        padding-top: 1rem;
+        padding-bottom: 2.4rem;
+    }
+}
+
+.my-breadcrumbs ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+@media (max-width: 769px) {
+    .my-breadcrumbs ul {
+        gap: 6px 1rem;
+    }
+}
+
+.my-breadcrumbs ul>li {
+    position: relative;
+}
+
+.my-breadcrumbs ul>li:not(:last-child) {
+    padding-right: 1.6rem;
+}
+
+.my-breadcrumbs ul>li:not(:last-child)::after {
+    content: "›";
+    display: block;
+    width: 5px;
+    height: 8px;
+    color: var(--color-black);
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+
+.my-breadcrumbs ul>li>a::first-letter {
+    text-transform: uppercase;
+}
+
+.my-breadcrumbs ul>li:last-child a {
+    color: var(--color-black);
+    pointer-events: none;
+}
