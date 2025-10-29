@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   galleries.forEach((gallery) => {
     const links = gallery.querySelectorAll("a:not(.more)");
-    console.log(links);
     const more = gallery.querySelector(".more");
 
     // если изображений меньше или равно 2 — скрывать ничего не нужно
@@ -357,7 +356,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       const regionInput = document.querySelector('input[name="mapArea"]');
-      console.log(regionInput);
 
       // Список регионов и их координаты
       const regions = {
@@ -369,7 +367,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       regionInput.addEventListener("change", () => {
         const val = regionInput.value.trim().toLowerCase();
-        console.log(regionInput);
 
         if (regions[val]) {
           const coords = regions[val];
