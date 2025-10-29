@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ".product-gallery__switch-btn"
   );
   const gallery = document.querySelector(".product-gallery");
+  if (!gallery) return;
 
   function initSwipers(type) {
     const mainSlides = gallery.querySelectorAll(
